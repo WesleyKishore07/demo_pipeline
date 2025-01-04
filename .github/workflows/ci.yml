@@ -24,8 +24,8 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: ./demo_pipeline  # Fixed path here
+        working-directory:   # Fixed path here
 
       - name: Run Tests
         run: npm test
-        working-directory: ./demo_pipeline  # Fixed path here
+        working-directory:  # Fixed path here
