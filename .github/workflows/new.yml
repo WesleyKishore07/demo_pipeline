@@ -1,0 +1,25 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Manual trigger support
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Add a basic check (can be adjusted for your project type)
+      - name: Validate File Structure
+        run: ls -R   # Lists all files in the repository for visibility in the logs
+
+      - name: Run Basic Tests (if applicable)
+        run: echo "No tests defined. Add test scripts if needed." && exit 0
